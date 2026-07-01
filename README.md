@@ -2,7 +2,7 @@
 
 A compact, color-coded status line for [Claude Code](https://claude.com/claude-code). It shows your model, context usage, location, session, PR review state, and rate limits — at a glance, on a single line.
 
-![Status line preview](preview.svg)
+![Status line preview](assets/preview.svg)
 
 > The colors and segments above are rendered exactly as they appear in your terminal. Segments only show up when Claude Code provides the data, so the line stays as short as your situation allows.
 
@@ -11,7 +11,7 @@ A compact, color-coded status line for [Claude Code](https://claude.com/claude-c
 | Segment | Example | Notes |
 | --- | --- | --- |
 | **Model + effort** | `Opus 4.8 high` | The active model and reasoning effort level. |
-| **Context bar** | `██████░░░░ 62% 124k/200k` | How much of the context window is used. Bar fills left→right and shifts **gray → yellow → coral** as it climbs (≥60% yellow, ≥85% coral). |
+| **Context bar** | `▮▮▮▮▮▮▯▯▯▯ 62% 124k/200k` | How much of the context window is used. Bar fills left→right and shifts **gray → yellow → coral** as it climbs (≥60% yellow, ≥85% coral). |
 | **Location** | `av-rx/claude-code-statusline@fix-auth` | `owner/repo` when in a git repo (with `@worktree` if applicable); otherwise the directory name. |
 | **Session** | `morning-session` | The current session name, if set. |
 | **PR** | `#142 ✓ approved` | Pull request number and review state: `✓ approved`, `✗ changes_requested`, `~ draft`, or `· open`. |
@@ -25,8 +25,8 @@ There are two identical status lines — same output, different runtime — so y
 
 | File | For | Needs |
 | --- | --- | --- |
-| `statusline-command.sh` | **macOS / Linux** (and Windows via Git Bash / WSL) | `bash` + `Node.js` |
-| `statusline-command.ps1` | **native Windows** — zero extra installs | PowerShell (built into Windows) |
+| `src/statusline-command.sh` | **macOS / Linux** (and Windows via Git Bash / WSL) | `bash` + `Node.js` |
+| `src/statusline-command.ps1` | **native Windows** — zero extra installs | PowerShell (built into Windows) |
 
 > **Why two?** On Windows, Claude Code runs the status line through Git Bash if it's installed, otherwise through PowerShell. The bash version needs Unix tools (`bash`, `date`, `awk`) that only exist on a plain Windows box if you've installed Git for Windows or WSL. The PowerShell version needs none of that — it runs on any Windows machine as-is.
 
@@ -59,7 +59,7 @@ Then **restart Claude Code** (or open a new session) to see it. Safe to re-run.
 
 ### Manual
 
-Copy `statusline-command.sh` to `~/.claude/statusline-command.sh`, `chmod +x` it, and add to `~/.claude/settings.json`:
+Copy `src/statusline-command.sh` to `~/.claude/statusline-command.sh`, `chmod +x` it, and add to `~/.claude/settings.json`:
 
 ```json
 {
@@ -93,7 +93,7 @@ Then **restart Claude Code** (or open a new session) to see it. Safe to re-run.
 
 ### Manual
 
-Copy `statusline-command.ps1` to `%USERPROFILE%\.claude\statusline-command.ps1` and add to `settings.json` (use **forward slashes** in the path — this works whether Claude Code routes the command through Git Bash or PowerShell):
+Copy `src/statusline-command.ps1` to `%USERPROFILE%\.claude\statusline-command.ps1` and add to `settings.json` (use **forward slashes** in the path — this works whether Claude Code routes the command through Git Bash or PowerShell):
 
 ```json
 {
