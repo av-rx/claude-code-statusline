@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="248" font-family="'JetBrains Mono','SF Mono','Cascadia Code',Menlo,Consolas,monospace" font-size="15">
+  <style>
+    .bg   { fill: #0d1117; }
+    .panel{ fill: #161b22; stroke: #21262d; stroke-width: 1; }
+    .title{ fill: #6c6c6c; font-size: 12px; }
+    text  { dominant-baseline: middle; }
+    .model{ fill:#d7afff; } .effort{ fill:#af87af; }
+    .barn { fill:#a8a8a8; } .barw{ fill:#ffd75f; } .barc{ fill:#ff8787; } .bare{ fill:#585858; }
+    .muted{ fill:#6c6c6c; } .loc { fill:#87afd7; } .sess{ fill:#d0d0d0; }
+    .ok   { fill:#afd787; } .warn{ fill:#ffd75f; } .crit{ fill:#ff8787; }
+    .plow { fill:#5fafaf; } .sep { fill:#808080; }
+    .white{ fill:#ffffff; }
+  </style>
+
+  <rect class="bg" x="0" y="0" width="900" height="248" rx="8"/>
+
+  <!-- Row 1: fresh session, low usage -->
+  <text x="24" y="34" class="title">fresh session — low context</text>
+  <rect class="panel" x="20" y="46" width="860" height="34" rx="6"/>
+  <text x="34" y="64">
+    <tspan class="model">Opus 4.8</tspan><tspan class="effort"> high</tspan><tspan class="sep">  │  </tspan><tspan class="barn">██</tspan><tspan class="bare">▒▒▒▒▒▒▒▒</tspan><tspan class="plow"> 18%</tspan><tspan class="muted"> 36k/200k</tspan><tspan class="sep">  │  </tspan><tspan class="muted">av-rx/</tspan><tspan class="loc">claude-code-statusline</tspan><tspan class="sep">  │  </tspan><tspan class="sess">morning-session</tspan>
+  </text>
+
+  <!-- Row 2: mid work, open PR, one rate limit -->
+  <text x="24" y="112" class="title">mid work — open PR, worktree, 5h limit</text>
+  <rect class="panel" x="20" y="124" width="860" height="34" rx="6"/>
+  <text x="34" y="142">
+    <tspan class="model">Sonnet 5</tspan><tspan class="effort"> medium</tspan><tspan class="sep">  │  </tspan><tspan class="barw">██████</tspan><tspan class="bare">▒▒▒▒</tspan><tspan class="warn"> 62%</tspan><tspan class="muted"> 124k/200k</tspan><tspan class="sep">  │  </tspan><tspan class="muted">acme/</tspan><tspan class="loc">backend</tspan><tspan class="muted">@fix-auth</tspan><tspan class="sep">  │  </tspan><tspan class="muted">#</tspan><tspan class="warn">128 · open</tspan><tspan class="sep">  │  </tspan><tspan class="muted">5h </tspan><tspan class="plow">48%</tspan><tspan class="muted"> 14:20</tspan>
+  </text>
+
+  <!-- Row 3: heavy usage, approved PR, both rate limits -->
+  <text x="24" y="190" class="title">heavy usage — approved PR, 5h + 7d limits</text>
+  <rect class="panel" x="20" y="202" width="860" height="34" rx="6"/>
+  <text x="34" y="220">
+    <tspan class="model">Opus 4.8</tspan><tspan class="effort"> high</tspan><tspan class="sep">  │  </tspan><tspan class="barc">█████████</tspan><tspan class="bare">▒</tspan><tspan class="crit"> 91%</tspan><tspan class="muted"> 182k/200k</tspan><tspan class="sep">  │  </tspan><tspan class="muted">acme/</tspan><tspan class="loc">frontend</tspan><tspan class="sep">  │  </tspan><tspan class="muted">#</tspan><tspan class="ok">142 ✓ approved</tspan><tspan class="sep">  │  </tspan><tspan class="muted">5h </tspan><tspan class="crit">88%</tspan><tspan class="muted"> 16:05  7d </tspan><tspan class="warn">73%</tspan><tspan class="muted"> Jul 3 9am</tspan>
+  </text>
+</svg>
