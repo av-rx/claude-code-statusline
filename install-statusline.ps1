@@ -60,7 +60,7 @@ $C_PCT_LOW   = "$ESC[38;5;73m"    # teal            - low percentage value
 
 # -- Glyphs (by code point so this file stays pure ASCII) ----------------------
 $G_FULL   = [char]0x2588          # full block
-$G_SHADE  = [char]0x2592          # medium shade
+$G_SHADE  = [char]0x2591          # light shade (empty bar cell)
 $G_BAR    = [char]0x2502          # vertical bar (separator)
 $G_CHECK  = [char]0x2713          # check mark
 $G_CROSS  = [char]0x2717          # ballot x

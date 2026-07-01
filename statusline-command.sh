@@ -51,7 +51,7 @@ make_bar() {
     local bar="${color}"
     for i in $(seq 1 $filled 2>/dev/null); do bar="${bar}█"; done
     bar="${bar}${C_BAR_EMPTY}"
-    for i in $(seq 1 $empty 2>/dev/null); do bar="${bar}▒"; done
+    for i in $(seq 1 $empty 2>/dev/null); do bar="${bar}░"; done
     bar="${bar}${RESET}"
     printf "%b" "$bar"
 }

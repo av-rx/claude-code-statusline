@@ -11,7 +11,7 @@ A compact, color-coded status line for [Claude Code](https://claude.com/claude-c
 | Segment | Example | Notes |
 | --- | --- | --- |
 | **Model + effort** | `Opus 4.8 high` | The active model and reasoning effort level. |
-| **Context bar** | `██████▒▒▒▒ 62% 124k/200k` | How much of the context window is used. Bar fills left→right and shifts **gray → yellow → coral** as it climbs (≥60% yellow, ≥85% coral). |
+| **Context bar** | `██████░░░░ 62% 124k/200k` | How much of the context window is used. Bar fills left→right and shifts **gray → yellow → coral** as it climbs (≥60% yellow, ≥85% coral). |
 | **Location** | `av-rx/claude-code-statusline@fix-auth` | `owner/repo` when in a git repo (with `@worktree` if applicable); otherwise the directory name. |
 | **Session** | `morning-session` | The current session name, if set. |
 | **PR** | `#142 ✓ approved` | Pull request number and review state: `✓ approved`, `✗ changes_requested`, `~ draft`, or `· open`. |
